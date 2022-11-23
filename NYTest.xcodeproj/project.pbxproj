@@ -12,7 +12,6 @@
 		C85FB65E292E2748008C881B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85FB65D292E2748008C881B /* Assets.xcassets */; };
 		C85FB661292E2748008C881B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85FB660292E2748008C881B /* Preview Assets.xcassets */; };
 		C85FB669292E27A3008C881B /* NYTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C85FB667292E27A3008C881B /* NYTest.xcdatamodeld */; };
-		C85FB66B292E2819008C881B /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85FB66A292E2819008C881B /* DataController.swift */; };
 		C85FB66E292E2FAB008C881B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85FB66D292E2FAB008C881B /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,7 +22,6 @@
 		C85FB65D292E2748008C881B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C85FB660292E2748008C881B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C85FB668292E27A3008C881B /* NYTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NYTest.xcdatamodel; sourceTree = "<group>"; };
-		C85FB66A292E2819008C881B /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		C85FB66D292E2FAB008C881B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -42,7 +40,6 @@
 			isa = PBXGroup;
 			children = (
 				C85FB66D292E2FAB008C881B /* CoreDataManager.swift */,
-				C85FB66A292E2819008C881B /* DataController.swift */,
 				C85FB667292E27A3008C881B /* NYTest.xcdatamodeld */,
 				C85FB658292E2747008C881B /* NYTest */,
 				C85FB657292E2747008C881B /* Products */,
@@ -155,7 +152,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C85FB65C292E2747008C881B /* ContentView.swift in Sources */,
-				C85FB66B292E2819008C881B /* DataController.swift in Sources */,
 				C85FB669292E27A3008C881B /* NYTest.xcdatamodeld in Sources */,
 				C85FB66E292E2FAB008C881B /* CoreDataManager.swift in Sources */,
 				C85FB65A292E2747008C881B /* NYTestApp.swift in Sources */,
