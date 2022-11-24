@@ -2,15 +2,20 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="21G217" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Category" representedClassName="Category" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="manyObjects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TaskObject" inverseName="categories" inverseEntity="TaskObject"/>
     </entity>
     <entity name="Task" representedClassName="Task" syncable="YES" codeGenerationType="class">
         <attribute name="dateCreated" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="frequency" optional="YES" attributeType="String"/>
         <attribute name="isComplete" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="oneObject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TaskObject" inverseName="mainTask" inverseEntity="TaskObject"/>
+        <relationship name="subObjects" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TaskObject" inverseName="subTasks" inverseEntity="TaskObject"/>
     </entity>
     <entity name="TaskObject" representedClassName="TaskObject" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <relationship name="mainTask" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task"/>
+        <relationship name="categories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="manyObjects" inverseEntity="Category"/>
+        <relationship name="mainTask" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="oneObject" inverseEntity="Task"/>
+        <relationship name="subTasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="subObjects" inverseEntity="Task"/>
     </entity>
 </model>
