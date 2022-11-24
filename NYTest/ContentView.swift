@@ -42,7 +42,6 @@ struct ContentView: View {
     @FetchRequest(entity: Task.entity(), sortDescriptors: [NSSortDescriptor(key: "dateCreated", ascending: false)]) private var allTasks: FetchedResults<Task>
     
     private func saveTask() {
-        
         do {
             let task = Task(context: viewContext)
             task.title = title
@@ -52,10 +51,9 @@ struct ContentView: View {
         } catch {
             print(error.localizedDescription)
         }
-        
     }
-    
-    private func styleForFrequency(_ value: String) -> Color {
+  /*
+    func styleForFrequency(_ value: String) -> Color {
         let frequency = Frequency(rawValue: value)
         
         switch frequency {
@@ -70,7 +68,7 @@ struct ContentView: View {
         }
     }
     
-    private func updateTask(_ task: Task) {
+    func updateTask(_ task: Task) {
         task.isComplete = !task.isComplete
         
         do {
@@ -92,6 +90,7 @@ struct ContentView: View {
             }
         }
     }
+   */
     
     var body: some View {
         NavigationStack {
@@ -110,7 +109,11 @@ struct ContentView: View {
                 } label: {
                     Text("Save")
                 }
-                
+                NavigationLink {
+                    ShowTasks()
+                } label: {
+                    Text("Test")
+                }/*
                 List {
                     ForEach(allTasks) { task in
                         HStack {
@@ -125,8 +128,8 @@ struct ContentView: View {
                             Text(task.title ?? "")
                         }
                     }.onDelete(perform: deleteTask)
-                }
-
+                }*/
+                
             }
             .padding()
         }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C83FA1ED292FC23700657BE9 /* ShowTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83FA1EC292FC23700657BE9 /* ShowTasks.swift */; };
 		C85FB65A292E2747008C881B /* NYTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85FB659292E2747008C881B /* NYTestApp.swift */; };
 		C85FB65C292E2747008C881B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85FB65B292E2747008C881B /* ContentView.swift */; };
 		C85FB65E292E2748008C881B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85FB65D292E2748008C881B /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C83FA1EC292FC23700657BE9 /* ShowTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTasks.swift; sourceTree = "<group>"; };
 		C85FB656292E2747008C881B /* NYTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C85FB659292E2747008C881B /* NYTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTestApp.swift; sourceTree = "<group>"; };
 		C85FB65B292E2747008C881B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			children = (
 				C85FB66C292E2F67008C881B /* Managers */,
 				C85FB659292E2747008C881B /* NYTestApp.swift */,
+				C83FA1EC292FC23700657BE9 /* ShowTasks.swift */,
 				C85FB65B292E2747008C881B /* ContentView.swift */,
 				C85FB65D292E2748008C881B /* Assets.xcassets */,
 				C85FB65F292E2748008C881B /* Preview Content */,
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C85FB65C292E2747008C881B /* ContentView.swift in Sources */,
+				C83FA1ED292FC23700657BE9 /* ShowTasks.swift in Sources */,
 				C85FB669292E27A3008C881B /* NYTest.xcdatamodeld in Sources */,
 				C85FB66E292E2FAB008C881B /* CoreDataManager.swift in Sources */,
 				C85FB65A292E2747008C881B /* NYTestApp.swift in Sources */,
