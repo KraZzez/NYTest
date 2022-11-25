@@ -41,12 +41,19 @@ struct ContentView: View {
     
     @FetchRequest(entity: Task.entity(), sortDescriptors: [NSSortDescriptor(key: "dateCreated", ascending: false)]) private var allTasks: FetchedResults<Task>
     
+    @FetchRequest(
+        sortDescriptors: []
+    ) var taskObject: FetchedResults<TaskObject>
+    
     private func saveTask() {
         do {
             let task = Task(context: viewContext)
             task.title = title
             task.frequency = selectedFrequency.rawValue
             task.dateCreated = Date()
+            let taskobject = TaskObject(context: viewContext)
+            taskobject.mainTask = task
+            taskobject.subTasks = [task]
             try viewContext.save()
         } catch {
             print(error.localizedDescription)

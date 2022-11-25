@@ -13,8 +13,8 @@
         <relationship name="subObjects" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TaskObject" inverseName="subTasks" inverseEntity="TaskObject"/>
     </entity>
     <entity name="TaskObject" representedClassName="TaskObject" syncable="YES" codeGenerationType="class">
-        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <relationship name="categories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="manyObjects" inverseEntity="Category"/>
+        <attribute name="taskType" optional="YES" attributeType="String"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Category" inverseName="manyObjects" inverseEntity="Category"/>
         <relationship name="mainTask" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="oneObject" inverseEntity="Task"/>
         <relationship name="subTasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="subObjects" inverseEntity="Task"/>
     </entity>

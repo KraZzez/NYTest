@@ -20,8 +20,9 @@ struct NYTestApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistantContainer.viewContext)
+            CoreDataRelationships()
+      //      ContentView()
+      //          .environment(\.managedObjectContext, persistantContainer.viewContext)
         }
     }
 }
